@@ -1,7 +1,8 @@
+call scimark#initVariable("g:scimCommand", '/usr/local/bin/sc-im')
+
 function! OpenInScim()
   let lineundercursor=getline('.')
   let curlinenumber = line('.')
-  echom lineundercursor
 
   if lineundercursor=~?'|.*|$'
 
@@ -29,7 +30,7 @@ function! OpenInScim()
     if writefile(fileLines, g:scimarkTempFile)
       echomsg 'write error'
     else
-      call term_start('/home/pim/cForks/sc-im/src/sc-im ' . g:scimarkTempFile, { 'exit_cb': function('g:ReadFromScim')})
+      call term_start(g:scimCommand . g:scimarkTempFile, { 'exit_cb': function('g:ReadFromScim')})
     endif
   endif
 
@@ -43,5 +44,5 @@ function! g:ReadFromScim(job,exit_code)
   exe 'r '.g:scimarkTempFile
 endfunction
 
-command! ScimEdit :call OpenInScim()
+command! OpenInScim :call OpenInScim()
 
