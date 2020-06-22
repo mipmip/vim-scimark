@@ -1,10 +1,13 @@
-# scim-in-vim-plugin
+# Scimark
 
-Edit embedded markdown tables in sc-im in vim
+Edit embedded markdown tables in Sc-im in Vim.
 
-# REQUIREMENT
+![demo.gif]
 
-At this moment you new a fork of sc-im which has the markdown additions needed by the plugin. Install sc-im from source...
+# PREREQUISITES
+
+At this moment you need a fork of sc-im which has the markdown additions needed
+by the plugin. Install sc-im from source...
 
 ```bash
 git clone https://github.com/mipmip/sc-im
