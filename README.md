@@ -2,7 +2,7 @@
 
 Edit embedded markdown tables in Sc-im in Vim.
 
-![demo.gif]
+![scimark demo](demo.gif)
 
 # PREREQUISITES
 
