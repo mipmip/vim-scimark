@@ -1,0 +1,73 @@
+*Scimark*  Edit embedded markdown tables in Sc-im in Vim
+>
+===============================================================================
+Contents ~
+
+ 1. Introduction                                           |Scimark-introduction|
+ 2. Usage                                                         |Scimark-usage|
+  1. Global commands                                    |Scimark-global-commands|
+   1. OpenInScim                                                     |OpenInScim|
+ 3. Mappings                                                   |Scimark-mappings|
+ 4. Options                                                     |Scimark-options|
+ 5. Bugs                                                           |Scimark-bugs|
+ 6. License                                                     |Scimark-license|
+
+===============================================================================
+                                                           *scimark-introduction*
+Introduction ~
+
+SciMark lets you instantly edit a markdown table in vim's terminal using
+sc-im. Sc-im is a vim-line cli spreadsheet editor.
+
+===============================================================================
+                                                                  *Scimark-usage*
+Usage ~
+
+-------------------------------------------------------------------------------
+                                                        *Scimark-global-commands*
+Global commands ~
+
+-------------------------------------------------------------------------------
+                                                                     *OpenInScim*
+OpenInScim ~
+>
+  When the cursor is located somewhere in a markdown table, the table will be
+  opened as a temporary file in Sc-im. When you write your changes and close
+  sc-im, the markdown table will be updated in your markdown editor.
+<
+
+===============================================================================
+                                                               *Scimark-mappings*
+Mappings ~
+
+-------------------------------------------------------------------------------
+                                                                 *Scimark-map-sc*
+nmap <leader>sc ~
+
+Bound to :OpenInScim
+
+
+===============================================================================
+                                                                *Scimark-options*
+Options ~
+
+g:scimCommand ~
+
+let g:scimCommand = '/usr/local/bin/sc-im'
+
+Loction of the sc-im binary.
+
+===============================================================================
+                                                                   *Scimark-bugs*
+Bugs ~
+
+Please submit bug reports in the issue tracker at
+https://github.com/mipmip/vim-scimark
+
+===============================================================================
+                                                                *Scimark-license*
+License ~
+
+GPL v3 - Copyright (c) Pim Snel 2020
+
+vim: ft=help

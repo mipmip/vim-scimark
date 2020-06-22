@@ -5,4 +5,3 @@ function! scimark#initVariable(var, value)
   endif
   return 0
 endfunction
-

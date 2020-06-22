@@ -30,7 +30,9 @@ function! OpenInScim()
     if writefile(fileLines, g:scimarkTempFile)
       echomsg 'write error'
     else
-      call term_start(g:scimCommand . g:scimarkTempFile, { 'exit_cb': function('g:ReadFromScim')})
+      echom g:scimCommand
+      echom g:scimarkTempFile
+      call term_start(g:scimCommand . ' ' . g:scimarkTempFile, { 'exit_cb': function('g:ReadFromScim')})
     endif
   endif
 
@@ -45,4 +47,4 @@ function! g:ReadFromScim(job,exit_code)
 endfunction
 
 command! OpenInScim :call OpenInScim()
-
+nmap <leader>sc :OpenInScim<CR>
