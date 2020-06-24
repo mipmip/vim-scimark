@@ -4,6 +4,8 @@ Edit embedded markdown tables in Sc-im in Vim.
 
 ![scimark demo](demo.gif)
 
+![scimark demo](ndemo.gif)
+
 # PREREQUISITES
 
 At this moment you need a fork of sc-im which has the markdown additions needed
