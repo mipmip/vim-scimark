@@ -30,15 +30,29 @@ function! OpenInScim()
     if writefile(fileLines, g:scimarkTempFile)
       echomsg 'write error'
     else
-      echom g:scimCommand
-      echom g:scimarkTempFile
-      call term_start(g:scimCommand . ' ' . g:scimarkTempFile, { 'exit_cb': function('g:ReadFromScim')})
+      if has('nvim')
+        exe 'split(:sp)'
+        call termopen(g:scimCommand . ' ' . g:scimarkTempFile, { 'on_exit': 'g:ReadFromScimNeoVim', 'on_stdout': 'NeoVimStartInsert'})
+      else
+        call term_start(g:scimCommand . ' ' . g:scimarkTempFile, { 'exit_cb': function('g:ReadFromScimVim')})
+      endif
     endif
   endif
 
 endfunction
 
-function! g:ReadFromScim(job,exit_code)
+function! g:ReadFromScimVim(job,exit_code)
+  call g:ReadFromScim()
+endfunction
+
+function! g:NeoVimStartInsert(job,data,event)
+  exe 'startinsert'
+endfunction
+function! g:ReadFromScimNeoVim(job,data,event)
+  call g:ReadFromScim()
+endfunction
+
+function! g:ReadFromScim()
   exe g:scimarkOpenerWindow . "wincmd w | wincmd c"
   exe 'buffer! '. g:scimarkOpenerBuffer
   exe g:scimarkTableTopLine.','.g:scimarkTableBottonLine.'d'
