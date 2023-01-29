@@ -1,6 +1,6 @@
 # Scimark
 
-Edit embedded markdown tables with [sc-im](https://github.com/andmarti1424/sc-im/wiki/Building-SC-IM) in a Vim terminal window.
+Edit embedded markdown tables with [SC-IM](https://github.com/andmarti1424/sc-im/) in a Vim terminal window.
 
 ## Prerequisites
 
