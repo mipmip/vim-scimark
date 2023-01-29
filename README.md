@@ -4,7 +4,7 @@ Edit embedded markdown tables with [SC-IM](https://github.com/andmarti1424/sc-im
 
 ## Prerequisites
 
-You need [sc-im](https://github.com/andmarti1424/sc-im/wiki/Building-SC-IM) v0.82 or higher.
+You need [SC-IM](https://github.com/andmarti1424/sc-im/) v0.82 or higher.
 
 ## Install
 
