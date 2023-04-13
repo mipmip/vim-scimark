@@ -1,4 +1,4 @@
-call scimark#initVariable("g:scimCommand", '/usr/local/bin/sc-im')
+call scimark#initVariable("g:scimCommand", 'sc-im')
 
 function! OpenInScim()
   let lineundercursor=getline('.')
